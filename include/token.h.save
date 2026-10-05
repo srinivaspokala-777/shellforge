@@ -1,0 +1,16 @@
+#ifndef TOKEN_H
+#define TOKEN_H
+
+#define MAX_TOKENS  128
+#define MAX_TOKEM_LEN  64
+
+typedef enum
+{
+  TOKEN_WORD,TOKEN_PIPE,TOKEN_INPUT,TOKEN_OUTPUT,TOKEN_APPEND,TOKEN_BACKGROUND, token_t  tokens [MAX
+
+
+
+void token_list_init(token_list_t *list);
+void token_add (token_list_t type,const char *text);
+void token_print(const token_list_t *list);
+#endif

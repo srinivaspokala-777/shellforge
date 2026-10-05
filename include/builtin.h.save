@@ -1,0 +1,25 @@
+#ifndef BUILTIN_H
+#define BUILTIN_H
+
+#include "parser.h"
+
+/*
+ * Check whether a command is a shell builtin.
+ *
+ * Returns:
+ *     1 -> builtin
+ *     0 -> not a builtin
+ */
+int is_builtin(const command_t *cmd);
+
+/*
+ * Execute a shell builtin.
+ *
+ * Returns:
+ *      0 -> success
+ *      1 -> exit requested
+ *     -1 -> error
+ */
+int execute_builtin(command_t *cmd);
+
+#endif /* BUILTIN_H */
